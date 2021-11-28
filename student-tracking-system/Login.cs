@@ -8,13 +8,11 @@ namespace student_tracking_system
 {
     internal class Login
     {
-        //properties...
-        bool isLogin = false;
-
         //methods...
-        public Login(VirtualDB db)
+        public static void login()
         {
-            while (!this.isLogin)
+            bool isLogin = false;
+            while (!isLogin)
             {
                 Console.Write("Kullanıcı Adı Giriniz: ");
                 string username = Console.ReadLine();
@@ -24,13 +22,10 @@ namespace student_tracking_system
 
                 Console.WriteLine();
 
-                foreach (Personal personal in db.personalList)
+                if (username == "burak" && password == "123456")
                 {
-                    if (username == personal.username && password == personal.password)
-                    {
-                        this.isLogin = true;
-                        Console.Clear();
-                    }
+                    isLogin = true;
+                    Console.Clear();
                 }
             }
         }

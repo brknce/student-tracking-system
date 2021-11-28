@@ -10,15 +10,12 @@ namespace student_tracking_system
     {
         static void Main(string[] args)
         {
-            VirtualDB db = new VirtualDB();
-            Menu menu = new Menu();
-            Login login = new Login(db);
+            Login.login();
 
-            Menu:
-            menu.showMenu();
-            int choose = Convert.ToInt32(Console.ReadLine());
-            menu.doSomething(db, choose);
-            goto Menu;
+            Loop:
+                Menu.showMenu();
+                Menu.doSomething();
+            goto Loop;
              
         }
     }
