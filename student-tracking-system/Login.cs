@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace student_tracking_system
 {
-    internal class Login
+    static class Login
     {
         //methods...
         public static void login()
@@ -20,12 +20,15 @@ namespace student_tracking_system
                 Console.Write("Şifre Giriniz: ");
                 string password = Console.ReadLine();
 
-                Console.WriteLine();
-
                 if (username == "burak" && password == "123456")
                 {
                     isLogin = true;
                     Console.Clear();
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("Kullanıcı adı veya şifre hatalı...");
                 }
             }
         }

@@ -9,16 +9,18 @@ namespace student_tracking_system
     internal class Student
     {
         //properties...
-        public string name, surname, birthdate;
-        public char gender;
-        public int classNo;
+        public string name { get; set; }
+        public string surname { get; set; }
+        public string birthday { get; set; }
+        public int classNo { get; set; }
+        public char gender { get; set; }
 
         //methods...
         public Student(string name, string surname, string birthdate, char gender, int classNo)
         {
             this.name = name;
             this.surname = surname;
-            this.birthdate = birthdate;
+            this.birthday = birthdate;
             this.gender = gender;
             this.classNo = classNo;
         }

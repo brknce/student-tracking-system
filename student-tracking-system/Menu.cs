@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace student_tracking_system
 {
-    internal class Menu
+    static class Menu
     {
         //methods...
         public static void showMenu()
@@ -21,16 +21,17 @@ namespace student_tracking_system
 
         public static void doSomething()
         {
-            StudentDB studentDB = new StudentDB();
             int choose = Convert.ToInt32(Console.ReadLine());
 
             if (choose == 0) { Environment.Exit(0); }
 
-            if (choose == 1) { studentDB.addStudent();}
+            if (choose == 1) { StudentDB.addStudent();}
 
-            if (choose == 3) { studentDB.ListStudent();}
+            if (choose == 2) { StudentDB.updateStudent(); }
+            
+            if (choose == 3) { StudentDB.ListStudent();}
 
-            if (choose == 4) { studentDB.ListStudentGender();}
+            if (choose == 4) { StudentDB.ListStudentGender();}
         }
     }
 }
