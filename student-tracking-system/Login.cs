@@ -8,7 +8,6 @@ namespace student_tracking_system
 {
     static class Login
     {
-        //methods...
         public static void login()
         {
             bool isLogin = false;
@@ -28,7 +27,8 @@ namespace student_tracking_system
                 else
                 {
                     Console.Clear();
-                    Console.WriteLine("Kullanıcı adı veya şifre hatalı...");
+                    Console.WriteLine("Kullanıcı adı veya şifre hatalı");
+                    Console.WriteLine("------------------------------------");
                 }
             }
         }

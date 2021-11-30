@@ -14,7 +14,18 @@ namespace student_tracking_system
 
             Loop:
                 Menu.showMenu();
-                Menu.doSomething();
+
+                int choose = Convert.ToInt32(Console.ReadLine());
+
+                if (choose == 0) { Environment.Exit(0); }
+
+                if (choose == 1) { StudentDB.addStudent(); }
+
+                if (choose == 2) { StudentDB.updateStudent(); }
+
+                if (choose == 3) { StudentDB.ListStudent(); }
+
+                if (choose == 4) { StudentDB.ListStudentByGender(); }
             goto Loop;
              
         }
